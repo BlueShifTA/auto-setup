@@ -1,0 +1,16 @@
+---
+- name: Install desktop development tools
+  ansible.builtin.apt:
+    name:
+      - just
+      - wezterm
+    state: present
+    update_cache: true
+  become: true
+
+- name: Install uv with pip
+  ansible.builtin.pip:
+    name: uv
+    state: latest
+    executable: pip3
+  become: true

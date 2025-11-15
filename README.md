@@ -25,3 +25,28 @@ Run Ansible lint checks with:
 ```bash
 just lint
 ```
+
+## Inventory layout
+
+Inventory is split by host type under `inventory/`:
+
+- `inventory/laptops.ini` — Ubuntu laptops (e.g., this laptop)
+- `inventory/jetsons.ini` — Jetson devices
+- `inventory/groups.ini` — shared groups/vars (`personal` includes both)
+
+Set the correct `ansible_host` and `ansible_user` values for your machines.
+
+## Running
+
+Target all devices defined in the inventory:
+
+```bash
+./deploy.yml
+```
+
+Target only laptops or only Jetsons:
+
+```bash
+./deploy.yml -l laptops
+./deploy.yml -l jetsons
+```
