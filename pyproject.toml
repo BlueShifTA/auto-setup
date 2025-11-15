@@ -1,25 +1,11 @@
 [project]
 name = "auto-setup"
-version = "0.1.0"
+version = "0.0.1" 
 description = "Minimal Ansible project to manage personal devices"
-requires-python = ">=3.8"
+readme = "README.md"
+requires-python = "==3.13.*"
 dependencies = [
-    "ansible>=8.0.0",
-    "ansible-core>=2.15.0",
+    "ansible==11.6.0",
+    "ansible-lint",
+    "pre-commit",
 ]
-
-[project.optional-dependencies]
-dev = [
-    "ansible-lint>=6.0.0",
-]
-
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools]
-# Prevent setuptools from trying to find packages
-py-modules = []
-
-[tool.ansible]
-# Ansible configuration can be managed via ansible.cfg
