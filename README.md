@@ -50,3 +50,8 @@ Target only laptops or only Jetsons:
 ./deploy.yml -l laptops
 ./deploy.yml -l jetsons
 ```
+
+
+### TODO
+- [ ] Check history for other items to add
+- [ ] separate tasks - don't use main
