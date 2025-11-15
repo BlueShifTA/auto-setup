@@ -1,0 +1,15 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Configure Ubuntu laptops
+  hosts: laptops
+  gather_facts: true
+  roles:
+    - 01_linux
+    - 02_ubuntu_laptop
+
+- name: Configure Jetson devices
+  hosts: jetsons
+  gather_facts: true
+  roles:
+    - 01_linux
+    - 03_jetson
