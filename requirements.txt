@@ -1,0 +1,3 @@
+# Python requirements are managed via pyproject.toml
+# To install: pip install -e .
+# To install with dev dependencies: pip install -e ".[dev]"
